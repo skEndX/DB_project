@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>    
+    <body>
+        <form action= "{{url_for('drop_out', phoneNumber=phoneNumber)}}" method = 'POST'>
+            <h1>Drop out</h1>
+            <label for='user_id'>ID : </label> <input type="text" name=phoneNumber value={{phoneNumber}} readonly><br><br>          
+
+            <input type='submit', value='Drop out'><br><br>
+        </form>
+        <a href= '{{url_for('login_success', phoneNumber=phoneNumber)}}'>Cancel</a>
+    </body>
+</html>

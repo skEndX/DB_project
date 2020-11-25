@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form action="{{url_for('pet_delete', phoneNumber=phoneNumber)}}" method='POST'>
+        <h1>Pet delete</h1>
+
+        <label for='user_id'>ID : </label> <input type="text" name=phoneNumber value={{phoneNumber}} readonly><br><br>  
+
+        <label for='pet'>Pet : </label> <select name='pet'>
+            {% for i in p_item %}
+            <option value={{i.p_num}}>{{i.p_name}}</option>
+            {% endfor %}
+        </select> <br><br><br>
+
+        <input type='submit', value='Delete'><br><br>
+    </form>
+    <a href='{{url_for('mypage', phoneNumber=phoneNumber)}}'>Cancel</a><br>
+</body>
+
+</html>

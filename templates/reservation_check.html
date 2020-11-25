@@ -1,0 +1,17 @@
+<!doctype HTML>
+<html>
+    <body>        
+        <h1>Reservation check</h1>
+        
+        <label for='m_num'>phoneNumber :</label> <input type="text" name='phone_Number' value={{phoneNumber}} readonly><br><br>
+
+        {% for item in items %}
+
+        <label for='instructor'>instructor :</label> {{ item.i_num }} <br>
+        <label for='pet'>pet :</label> {{ item.p_num}} <br>
+        <label for='day'>day :</label> {{ item.r_day }} <br>
+         <label for='time'>time :</label> {{ item.r_time}} <br><br> <!--뭘 출력하는 지 반목문을 돌면서 출력-->
+        {% endfor %}
+        <p>This is a link to <a href='{{url_for('mypage', phoneNumber=phoneNumber)}}'>Cancel</a></p>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form action="{{url_for('mypage', phoneNumber=phoneNumber)}}" method='POST'>
+    
+        <label for='user_id'>ID : </label> <input type="text" name='phoneNumber' value={{phoneNumber}} readonly><br>
+        
+        <p>This is a link to <a href='{{url_for('pet_add', phoneNumber=phoneNumber)}}'>Pet add</a></p>
+        <p>This is a link to <a href='{{url_for('pet_delete', phoneNumber=phoneNumber)}}'>Pet delete</a></p>
+        <p>This is a link to <a href='{{url_for('reservation_check', phoneNumber=phoneNumber)}}'>Reservation check</a></p>
+        <p>This is a link to <a href='{{url_for('pet_diary_check', phoneNumber=phoneNumber)}}'>Pet diary check</a></p>
+        <p>This is a link to <a href='{{url_for('my_info', phoneNumber=phoneNumber)}}'>my info</a></p><br><br> 
+        
+    </form>
+    <a href='{{url_for('login_success', phoneNumber=phoneNumber)}}'>Cancel</a><br>
+    <a href='{{url_for('start')}}'>home</a><br>
+</body>
+
+</html>

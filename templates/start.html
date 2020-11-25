@@ -1,0 +1,15 @@
+<!doctype HTML>
+<html>
+    <body>        
+        <h1>memeber</h1>
+        <p>This is a link to <a href='{{url_for('m_join')}}'>Join</a></p>
+        <p>This is a link to <a href='{{url_for('login')}}'>LogIn</a></p>
+        {% for item in items %}
+        {{ item.m_num }} <br>
+        {{ item.m_name }} <br>
+        {{ item.m_addr}} <br>
+        {{ item.m_sex }} <br><br> <!--뭘 출력하는 지 반목문을 돌면서 출력-->
+        <!--<a href=#>Edit</a><br><br> -->
+        {% endfor %}
+    </body>
+</html>

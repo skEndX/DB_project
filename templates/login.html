@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>    
+    <body>
+        <form action= "{{url_for('login')}}" method = 'POST'>
+            <h1>Login</h1>
+            <h2>ID and pW is your phone Number.</h2>
+
+            <label for='user_id'>ID</label>
+            <input id='user_id' type = 'text' name = 'user_id', placeholder='phoneNumber'><br>
+        
+            <label for='user_pw'>Address</label>
+            <input id='user_pw' type = 'text' name = 'user_pw', placeholder='phoneNumber'><br>
+
+            <input type='submit', value='Login'>
+        </form>
+        <a href= '{{url_for('start')}}'>Cancel</a>
+    </body>
+</html>

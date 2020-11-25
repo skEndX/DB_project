@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form action="{{url_for('p_join')}}" method='POST'>
+    
+        <label for='m_num'>phoneNumber :</label> <input type="text" name='phone_Number' value={{phoneNumber}} readonly><br><br>
+
+        <h3>Add you pet!</h3>
+        <label for='name'>Name</label>
+        <input id='name' type='text' name='p_name' , placeholder=''><br>
+
+        <label for='number'>Number</label>
+        <input id='number' type='text' name='p_number', placeholder='9자리'><br>
+
+        <label for='birthday'>Birthday</label>
+        <input id='birthday' type='int' name='p_birth' , placeholder='YYMMDD'><br>
+
+        <label for='sex'>Sex</label>
+        <input id='sex' type='text' name='p_sex' , placeholder='W/M'><br>
+
+        <label for='breed'>Breed</label>
+        <input id='breed' type='text' name='p_breed', placeholder='ex)Maltese'><br>
+
+        <label for='weight'>Weight</label>
+        <input id='weight' type='float' name='p_weight', placeholder='float'><br><br><br>
+        
+        <input type='submit', value='Add'><br><br><br>
+    </form>
+    <a href='{{url_for('m_join')}}'>Cancel</a><br>
+</body>
+
+</html>

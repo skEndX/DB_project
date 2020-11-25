@@ -1,0 +1,17 @@
+<!doctype HTML>
+<html>
+    <body>        
+        <h1>Pet diary check</h1>
+        
+        <label for='m_num'>phoneNumber :</label> <input type="text" name='phone_Number' value={{phoneNumber}} readonly><br><br>
+
+        {% for item in items %}
+
+        <label for='pet'>pet :</label> {{ item.p_num }} <br>
+        <label for='day'>day :</label> {{ item.log_day}} <br>
+        <label for='sleep'>sleep :</label> {{ item.sleep }} <br>
+         <label for='diet'>diet :</label> {{ item.diet}} <br><br> <!--뭘 출력하는 지 반목문을 돌면서 출력-->
+        {% endfor %}
+        <p>This is a link to <a href='{{url_for('mypage', phoneNumber=phoneNumber)}}'>Cancel</a></p>
+    </body>
+</html>

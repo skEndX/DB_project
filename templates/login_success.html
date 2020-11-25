@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>    
+    <body>
+        <form action= "{{url_for('login', phoneNumber=phoneNumber)}}">
+            <label for='user_id'>ID : </label> <input type="text" name='phoneNumber' value={{phoneNumber}} readonly><br>
+        
+            <p>This is a link to <a href='{{url_for('mypage', phoneNumber=phoneNumber)}}'>My page</a></p>
+            <p>This is a link to <a href='{{url_for('reservation', phoneNumber=phoneNumber)}}'>Reservation</a></p>
+            <p>This is a link to <a href='{{url_for('drop_out', phoneNumber=phoneNumber)}}'>Drop out</a></p><br><br> 
+
+            <a href= '{{url_for('start')}}'>Cancel</a>
+        </form>
+    </body>
+</html>

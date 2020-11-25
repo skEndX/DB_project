@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form action="{{url_for('my_info',phoneNumber=phoneNumber)}}" method='POST'>
+    
+        <label for='number'>Number</label>
+        <input id='number' type = 'text' name = 'mem_number', value='{{phoneNumber}}'><br>
+        
+        <label for='name'>Name</label>
+        <input id='name' type = 'text' name = 'mem_name', value='{{item.m_name}}'><br>
+        
+        <label for='addr'>Address</label>
+        <input id='addr' type = 'text' name = 'mem_addr', value='{{item.m_addr}}'><br>
+        
+        <label for='sex'>Sex</label>
+        <input id='sex' type = 'text' name = 'mem_sex', value='{{item.m_sex}}'><br>
+        
+        <input type='submit', value='Edit'><br><br><br>
+    </form>
+    <a href='{{url_for('mypage', phoneNumber=phoneNumber)}}'>Cancel</a><br>
+</body>
+
+</html>

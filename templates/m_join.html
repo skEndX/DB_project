@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action= "{{url_for('m_join')}}" method = 'POST'>
+        <label for='number'>Number</label>
+        <input id='number' type = 'text' name = 'mem_number', placeholder='xxxxxxxxxxx'><br>
+        
+        <label for='name'>Name</label>
+        <input id='name' type = 'text' name = 'mem_name', placeholder='{{item.m_name}}'><br>
+        
+        <label for='addr'>Address</label>
+        <input id='addr' type = 'text' name = 'mem_addr', placeholder='5자리'><br>
+        
+        <label for='sex'>Sex</label>
+        <input id='sex' type = 'text' name = 'mem_sex', placeholder='W/M'><br>
+
+        <input type='submit', value='next'>
+    </form>
+<a href= '{{url_for('start')}}'>Cancel</a>
+</body>
+</html>
