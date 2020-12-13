@@ -275,38 +275,3 @@ def pet_diary_check(phoneNumber):
 
     db.close()
     return render_template('pet_diary_check.html',phoneNumber=phoneNumber, items=items)
-
-@app.route('/pet/login/login_success/mypage/my_info/<phoneNumber>/', methods=['GET','POST'])
-def my_info(phoneNumber):
-    if request.method=='POST':
-        db = sqlite3.connect("pet.db")
-        db.row_factory = sqlite3.Row
-        
-        name=request.form['mem_name']
-        num=request.form['mem_number']
-        addr=request.form['mem_addr']
-        sex=request.form['mem_sex']
-        
-        if num=='':
-            return redirect(url_for('login_fail'))
-        
-        val=(num,name, addr, sex)
-        sql="update member set m_num=?,m_name=?, m_addr=?, m_sex=? where m_num='"+phoneNumber+"'"
-
-        db.execute(sql, val)
-
-        db.commit()
-        db.close()
-        return redirect(url_for('mypage',phoneNumber=phoneNumber))
-    else:
-        db = sqlite3.connect("pet.db")
-        db.row_factory = sqlite3.Row
-
-        sql="select * from member where m_num='"+phoneNumber+"'"
-        item=db.execute(sql).fetchone()
-        db.close()
-        return render_template('my_info.html',phoneNumber=phoneNumber,item=item)
-
-if __name__ == '__main__':
-    app.debug = True
-    app.run(host='127.0.0.1', port=5000)
