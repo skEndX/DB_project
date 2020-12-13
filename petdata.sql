@@ -1,9 +1,3 @@
-insert into member values ('01012341234','Amy','23513','W');
-insert into member values ('01037144918','Jacob','22934','M');
-insert into member values ('01033453237','Ethan','94021','M');
-insert into member values ('01004004392','Michael','52193','W');
-insert into member values ('01040935392','Daniel','05593','M');
-
 insert into pet values ('01012341234','410846459730954', 141103, 'W', 'Cookie', 'Maltese', '5.3');
 insert into pet values ('01037144918','410146805739832', 150506, 'M', 'Bebe', 'Pomeranian', '3.4');
 insert into pet values ('01033453237','410397006766532', 130318, 'M', 'Coco', 'Toy Poodle', '3.2');
