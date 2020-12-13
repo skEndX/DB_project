@@ -1,10 +1,3 @@
-DROP TABLE IF EXISTS member;
-DROP TABLE IF EXISTS instructor;
-DROP TABLE IF EXISTS pet;
-DROP TABLE IF EXISTS reservation;
-DROP TABLE IF EXISTS disease;
-DROP TABLE IF EXISTS daily_log; 
-
 CREATE TABLE member(
 	m_num text,
 	m_name text,
