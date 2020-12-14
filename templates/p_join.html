@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            h3 {
+                color: lime;
+                font-weight: bold;
+            }
+            .dahee{
+                text-align: center;
+                width: 200px;
+                border: 5px solid white;
+                border-radius: 20px;
+                padding: 0 20px 20px 20px;
+                margin: 1em auto;
+                font-size: 20px;
+            }
+            .dahee form {
+                display: flex;
+                flex-direction: column;
+            }
+            .dahee form input {
+                margin: 1em 0;
+            }
+        </style>
+    </head>
 
 <body>
+    <div class='dahee'>
     <form action="{{url_for('p_join')}}" method='POST'>
     
-        <label for='m_num'>phoneNumber :</label> <input type="text" name='phone_Number' value={{phoneNumber}} readonly><br><br>
+        <label for='m_num'>phoneNumber :</label> <input type="text" name='phone_Number' value={{phoneNumber}} readonly><br>
 
         <h3>Add you pet!</h3>
         <label for='name'>Name</label>
@@ -23,11 +48,12 @@
         <input id='breed' type='text' name='p_breed', placeholder='ex)Maltese'><br>
 
         <label for='weight'>Weight</label>
-        <input id='weight' type='float' name='p_weight', placeholder='float'><br><br><br>
+        <input id='weight' type='float' name='p_weight', placeholder='float'><br><br>
         
-        <input type='submit', value='Add'><br><br><br>
+        <input type='submit', value='Add'><br><br>
     </form>
     <a href='{{url_for('m_join')}}'>Cancel</a><br>
+</div>
 </body>
 
 </html>
