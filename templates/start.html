@@ -1,15 +1,45 @@
 <!doctype HTML>
 <html>
-    <body>        
-        <h1>memeber</h1>
-        <p>This is a link to <a href='{{url_for('m_join')}}'>Join</a></p>
-        <p>This is a link to <a href='{{url_for('login')}}'>LogIn</a></p>
-        {% for item in items %}
-        {{ item.m_num }} <br>
-        {{ item.m_name }} <br>
-        {{ item.m_addr}} <br>
-        {{ item.m_sex }} <br><br> <!--뭘 출력하는 지 반목문을 돌면서 출력-->
-        <!--<a href=#>Edit</a><br><br> -->
-        {% endfor %}
+    <head>
+        <style>
+            h2 {
+                color: lime;
+                font-weight: bold;
+            }
+            .dahee{
+                text-align: center;
+                width: 400px;
+                border: 5px solid blue;
+                border-radius: 20px;
+                padding: 0 20px 20px 20px;
+                margin: 1em auto;
+                font-size: 18px;
+            }
+            .dahee form {
+                display: flex;
+                flex-direction: column;
+            }
+            .dahee form input {
+                margin: 1em 0;
+            }
+        </style>
+    </head>
+
+    <body>  
+        <div class='dahee'>   
+            <h1>hello~~  dahee's shop</h1>
+            <p>This is a link to <a href='{{url_for('m_join')}}'>Join</a></p>
+            <p>This is a link to <a href='{{url_for('login')}}'>LogIn</a></p>
+        </div>   
+
+        <div class='dahee'>
+            <h2>회원 목록</h2>
+            {% for item in items %}
+            {{ item.m_num }} <br>
+            {{ item.m_name }} <br>
+            {{ item.m_addr}} <br>
+            {{ item.m_sex }} <br><br>
+            {% endfor %}
+        </div>
     </body>
 </html>
