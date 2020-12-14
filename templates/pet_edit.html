@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form action="{{url_for('pet_edit', phoneNumber=phoneNumber, p_num=p_item.p_num)}}" method='POST'>
+        
+        <label for='name'>Name</label>
+        <input id='name' type = 'text' name = 'p_name', value='{{p_item.p_name}}'><br><Br>
+
+        <label for='number'>Number</label>
+        <input id='number' type = 'int' name = 'p_number', value='{{p_item.p_num}}' readonly><br><br>
+        
+        <label for='addr'>Address</label>
+        <input id='addr' type = 'text' name = 'p_weight', value='{{p_item.p_weight}}'><br><br>
+        
+        <input type='submit', value='Edit'><br><br><br>
+    </form>
+    <a href='{{url_for('mypage', phoneNumber=phoneNumber)}}'>Cancel</a><br>
+</body>
+
+</html>
